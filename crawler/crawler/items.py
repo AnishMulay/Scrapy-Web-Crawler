@@ -13,3 +13,7 @@ class CrawlerItem(scrapy.Item):
     author = scrapy.Field()
     tags = scrapy.Field()
     pass
+
+class ReviewItem(scrapy.Item):
+	id = scrapy.Field()
+	body = scrapy.Field()
