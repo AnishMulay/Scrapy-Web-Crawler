@@ -2,14 +2,17 @@ import scrapy
 import re
 from ..items import ReviewItem
 
-class QuoteSpider(scrapy.Spider):
+class ReviewSpider(scrapy.Spider):
 	name = 'reviews'
 	# start_urls = [
 	# 	'https://quotes.toscrape.com/'
 	# ]
 	start_urls = [
-		'https://www.rottentomatoes.com/m/superman_man_of_steel/reviews'
+		'https://www.rottentomatoes.com/m/black_panther_2018/reviews?type=&sort=&page=1'
 	]
+
+	page_number = 2
+	count = 1
 
 	def clean(str):
 		cleanr = re.compile('<.*?>')
@@ -46,11 +49,15 @@ class QuoteSpider(scrapy.Spider):
 		items = ReviewItem()
 
 		all_reviews = response.css('.the_review').extract()
-		count = 1
 
 		for review in all_reviews:
-			review = QuoteSpider.clean(review)
-			items['id'] = count
+			review = ReviewSpider.clean(review)
+			items['id'] = ReviewSpider.count
 			items['body'] = review
-			count += 1
+			ReviewSpider.count += 1
 			yield items
+
+		next_page = 'https://www.rottentomatoes.com/m/black_panther_2018/reviews?type=&sort=&page='+ str(ReviewSpider.page_number) + '/'
+		if ReviewSpider.page_number < 26:
+			ReviewSpider.page_number += 1
+			yield response.follow(next_page, callback=self.parse)			
