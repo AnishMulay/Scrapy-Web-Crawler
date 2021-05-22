@@ -7,7 +7,6 @@
 ### Table of Contents
 - [Description](#description)
 - [How To Use](#how-to-use)
-- [References](#references)
 - [Author Info](#author-info)
 
 ---
@@ -45,10 +44,6 @@ To crawl the reviews and store them in a csv file, we simply have to navigate to
 ```
 Here, you can replace reviews.csv with any filename of your choice. The crawler will crawl and store the first 500 reviews of the movie. This can be changed by navigating to the reviews\_spider.py file as shown above and changing the number of pages from 25 to the required amount.
 
----
-
-## References
-https://www.youtube.com/watch?v=ve_0h4Y8nuI&list=PLhTjy8cBISEqkN-5Ku_kXG4QW33sxQo0t
 ---
 
 ## Author Info
