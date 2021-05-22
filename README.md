@@ -21,8 +21,6 @@ Collecting data in the form of sentences can be useful for many applications inc
 - python
 - scrapy python package
 
-[Back To The Top](#read-me-template)
-
 ---
 
 ## How To Use
@@ -46,18 +44,14 @@ To crawl the reviews and store them in a csv file, we simply have to navigate to
    scrapy crawl reviews -o reviews.csv
 ```
 Here, you can replace reviews.csv with any filename of your choice. The crawler will crawl and store the first 500 reviews of the movie. This can be changed by navigating to the reviews\_spider.py file as shown above and changing the number of pages from 25 to the required amount.
-[Back To The Top](#read-me-template)
 
 ---
 
 ## References
 https://www.youtube.com/watch?v=ve_0h4Y8nuI&list=PLhTjy8cBISEqkN-5Ku_kXG4QW33sxQo0t
-[Back To The Top](#read-me-template)
 ---
 
 ## Author Info
 
 - Instagram - [@AnishMulay](https://www.instagram.com/_Anish_Mulay_/)
 - Email - f20180907@goa.bits-pilani.ac.in
-
-[Back To The Top](#read-me-template)
