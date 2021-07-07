@@ -13,7 +13,7 @@
 
 ## Description
 
-Collecting data in the form of sentences can be useful for many applications including sentiment analysis using NLP or for a simple classificatin model. Gathering such data can often be a tedious and frustrating task. This project will help you generate the required data by performing a few simple steps.
+Collecting data in the form of sentences can be useful for many applications including sentiment analysis using NLP or for a simple classification model. Gathering such data can often be a tedious and frustrating task. This project will help you generate the required data by performing a few simple steps.
 
 #### Requirements
 
